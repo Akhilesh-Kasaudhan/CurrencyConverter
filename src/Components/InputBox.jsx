@@ -22,9 +22,9 @@ function InputBox() {
     }
 
   return (
-    <div className='w-full h-screen flex flex-col gap-8 items-center justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500 '>
-        <div className=' bg-white opacity-50 w-[500px] h-[300px] flex flex-col gap-8 p-4 rounded-lg border'>
-        <div className='flex items-center justify-center p-6 rounded-xl text-xl text-justify gap-4 font-bold '>
+    <div className='w-full  h-screen flex flex-col gap-8 items-center justify-center bg-gradient-to-r from-violet-500 to-fuchsia-500 '>
+        <div className=' bg-white opacity-50 w-[95%] lg:w-[50%]   h-[300px] flex flex-col gap-12 py-8 px-4 rounded-lg border'>
+        <div className='flex items-center justify-center  rounded-xl text-lg  md:text-xl md:font-bold md:gap-4  '>
             <label htmlFor='' >From:- </label>
             <input className='bg-slate-400 pl-2   opacity-70' type="number" placeholder='Enter Amount' value={amount} onChange={(e)=>{setAmount(Number(e.target.value))}} />
             <select name="" id="" value={from}  onChange={(e)=>{setFrom(e.target.value)}} >Currency
@@ -37,9 +37,9 @@ function InputBox() {
             
             
         </div>
-        <div className='  flex items-center justify-between p-6 rounded-xl text-xl text-justify gap-4 font-bold '>
+        <div className='flex items-center justify-center md:px-4 md:gap-4  rounded-xl text-lg md:text-xl md:font-bold '>
             <label htmlFor="">To:- </label>
-            <input lassName='bg-slate-400 px-2 ' type="text" value={convertedAmount} disabled/>
+            <input className='bg-slate-400  ' type="text" value={convertedAmount} disabled/>
             <select name="" value={to} id="" onChange={(e)=>{setTo(e.target.value)}} >Currency
             {
                option.map((currency,index)=>{
@@ -50,7 +50,7 @@ function InputBox() {
             
             
         </div>
-        <button className='bg-black text-white p-2 w-[50%] mx-auto rounded-xl ' onClick={()=>convertcurrr(from,to,amount)}>Convert {from} To {to}</button>
+        <button className='bg-black text-white p-2 w-[70%] md:w-[50%] mx-auto rounded-xl ' onClick={()=>convertcurrr(from,to,amount)}>Convert {from} To {to}</button>
         </div>
        
     </div>
